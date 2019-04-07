@@ -64,9 +64,9 @@ console.log(fullName);
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
-runners.forEach(function(names)
+allCaps = runners.map(function(names)
 {
-  allCaps.push(names.first_name.toUpperCase())
+  return names.first_name.toUpperCase()
 })
 console.log(allCaps);
 
@@ -97,4 +97,8 @@ let companyNames = []
 companyNames = runners.map((runner, index) => {return runner.company_name})
 console.log(companyNames)
 
-// Problem 3
+// Problem 3 all company names with "inc." added to their name 
+let newCompanyNames = []
+newCompanyNames = runners.map(function(company_name){
+return (`${company_name} inc`)
+})
